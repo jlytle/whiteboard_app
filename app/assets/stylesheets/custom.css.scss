@@ -1,0 +1,158 @@
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px;
+ background: #333;
+}
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ color: white;
+ width: 900px;
+ float: left;
+ padding: 10px;
+ border: 1px solid #ccc;
+ height: 70px;
+ margin: 5px 0px 5px 0px;
+ background: #00B4FF;
+ .header_logo {margin-right: 10px;}
+
+ -webkit-border-radius: 5px;
+ -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#navigation {
+ float: left;
+ width: 900px;
+ padding: 10px;
+ padding-top: 2px;
+ height: 15px;
+ border: 1px solid #ccc;
+ margin: 5px 0px 5px 0px;
+ background: #EEEEEE;
+ border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px;
+ ul {margin: 0; padding: 0;}
+ li {list-style-type: none; display: inline-block; padding: 0.2em 0;}
+ a {padding: 0 5px; font-weight: bold; color: #515151; text-decoration: none;}
+ a:visited {}
+ a:hover {text-decoration: underline; color: black;}
+}
+
+#leftcolumn { 
+ border: 0px solid #ccc;
+ margin: 5px 0px 10px 0px;
+ padding: 10px;
+ min-height: 700px;
+ height: auto;
+ width: 673px;
+ float: left;
+ background: #333;
+ border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+ a {padding: 0 5px; font-weight: none; text-decoration: none; color: #EEEEEE;}
+ a:visited {}
+ a:hover {text-decoration: underline; color: #00B4FF;}
+ h2 {font-size: 13px;color: #EEEEEE;}
+ h3 {font-size: 13px;color: #EEEEEE;}
+ h4 {font-size: 13px;color: #00B4FF;}
+
+}
+#rightcolumn { 
+ float: right;
+ color: #00B4FF;
+ border: 0px solid #ccc;
+ margin: 5px 0px 10px 0px;
+ padding: 10px;
+ min-height: 700px;
+ width: 198px;
+ display: inline;
+ background: #333;
+ position: relative;
+ border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+ a {color: #EEEEEE; text-decoration: none;}
+ a:hover {text-decoration: underline;}
+ h5 {color: #EEEEEE;}
+
+}
+
+#footer { 
+ width: 901px;
+ height: 125px;
+ clear: both;
+ color: white;
+ border: 0px solid black;
+ background: #515151;
+ padding: 10px;
+ margin: 0px 0px 5px 0px;
+ a {color: #00B4FF; text-decoration: none;}
+ a:hover {color: #EEEEEE; text-decoration: none;border-left: 3px solid #00B4FF;}
+ h5 {color: #EEEEEE; font-size: 15px; margin: 0px;}
+ border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+ .footer_div_01 {width: 171px; float: left; height: 200px; padding: 2px; margin: 2px;}
+ .footer_div_02 {width: 171px; float: left; height: 200px; padding: 2px; margin: 2px;}
+ .footer_div_03 {width: 171px; float: left; height: 200px; padding: 2px; margin: 2px;}
+ .footer_div_04 {width: 171px; float: left; height: 200px; padding: 2px; margin: 2px;}
+ .footer_div_05 {width: 171px; float: left; height: 200px; padding: 2px; margin: 2px;}
+}
+
+
+		
+
+.stripe	{
+   background: lightgray;
+}
+
+.bubble_boxes {
+	
+	background: #515151;
+	margin: 5px;
+	box-shadow: 1px 1px 1px #00B4FF; -moz-box-shadow: 1px 1px 1px #00B4FF; -webkit-box-shadow: 1px 1px 1px #00B4FF;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; 
+	padding: 5px;
+	h1 {font-size: 15px;color: #00B4FF; font-weight: bold;} 
+	h2 {font-size: 13px;color: #EEEEEE;} 
+	h3 {font-size: 13px;color: #EEEEEE;float: right;} 
+	h4 {font-size: 13px;color: #EEEEEE;float: right;}
+	h5 {color: #EEEEEE;}
+	#notice{padding: 2px; color: white; float: right;}
+}
+
+.add_boxes {
+	
+	margin: 5px;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; 
+	padding: 5px;
+	h1 {font-size: 15px;color: #00B4FF; font-weight: bold;} 
+	h2 {font-size: 13px;color: #EEEEEE;} 
+	h3 {font-size: 13px;color: #EEEEEE;float: right;} 
+	h4 {font-size: 13px;color: #EEEEEE;float: right;}
+	h5 {color: #EEEEEE;}
+	#notice{padding: 2px; color: white; float: right;}
+}
+
+.authentication_box {
+	
+	background: #515151;
+	margin-left: 350px;
+	margin-top: 100px;
+	width: 275px;
+	box-shadow: 1px 1px 1px #00B4FF; -moz-box-shadow: 1px 1px 1px #00B4FF; -webkit-box-shadow: 1px 1px 1px #00B4FF;
+	border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; 
+	padding: 15px;
+	h1 {font-size: 20px;color: #EEEEEE; font-weight: bold;} 
+	h2 {font-size: 13px;color: #00B4FF;} 
+	h3 {font-size: 13px;color: white;} 
+	h4 {font-size: 13px;color: #EEEEEE;float: right;}
+	h5 {font-size: 25px;color: #00B4FF;text-align: center;margin-bottom: 15px;}
+	#notice{padding: 2px; color: white; float: right; border: 2px solid #00B4FF;}
+	a {color: #00B4FF;}
+	a:hover {color: white;}
+	
+}
+
+.authentication_nav {
+
+}

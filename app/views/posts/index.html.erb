@@ -1,0 +1,16 @@
+<center><b><%= link_to 'New Post', new_post_path %></b></center>
+
+<% @posts.each do |post| %>
+	<table>
+		<div class='bubble_boxes'>
+  	<h1><%= truncate(post.post_title.titleize, :length => 20, :separator => ' ') %></h1>
+    <h2><%= truncate(post.post_body,  :length => 300, :separator => ' ') %></h2>
+    <h3><%= "#{post.user.first_name} #{post.user.last_name} - #{time_ago_in_words post.created_at} ago" %></h3>
+    <%= link_to 'Show', post %>
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Remove', post, confirm: 'Are you sure?', method: :delete %>
+		<%= link_to 'Comment', '#' %>
+<% end %>
+		</div>
+</table>
+

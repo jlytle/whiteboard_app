@@ -1,0 +1,18 @@
+<br />
+<div class='authentication_box'>
+	<h5>Whiteboard App</h5>
+<h1>Login</h1>
+
+<%= form_tag sessions_path do %>
+  <h2>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </h2>
+  <h2>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </h2>
+  <p class="button"><%= submit_tag "Log in" %></p>
+<% end %>
+
+<h3>No Account? <%= link_to "Sign up now!", sign_up_path %></h3>

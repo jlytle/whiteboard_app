@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title><%= title %></title>
+		<%= csrf_meta_tag %> 
+		<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+		<%= javascript_include_tag 'application' %>
+		<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+		<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+			<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+		<%= stylesheet_link_tag 'custom', :media => 'screen' %>	
+	</head>
+	<body>
+	  <!-- Begin Wrapper -->
+	  <div id="wrapper">
+		
+			<!-- Begin Header -->
+	  	<div id="header">
+		  	<div class="header_logo"><%= image_tag"whiteboard.png", {:height => 75, :width => 400} %></div>
+ 				<!--<h1>Whiteboard App</h1>	-->
+ 
+			</div>
+			<!-- End Header -->
+
+			<!-- Begin Navigation -->
+				<div id="navigation">
+					<ul>
+						<li><%= link_to 'Workbench', '#' %></li>
+						<li><%= link_to 'Calendar',  '#' %></li>
+						<li><%= link_to 'Project',   '#' %></li>
+						<li><%= link_to 'Docs',      '#' %></li>
+						<li><%= link_to 'Mail',      '#' %></li>
+						<li><%= link_to 'Posts', :action=>"index", :controller=>"posts" %></li>
+					</ul>
+				</div>
+			<!-- End Navigation -->
+
+			<!-- Begin Left Column -->
+			<div id="leftcolumn">
+				
+				<div id="authentication_nav">
+					<% if current_user %>
+				  	<b><h4>Welcome</b> <%= current_user.first_name %>! <b>Not you?</b> 
+				    <%= link_to "Log out", log_out_path %>now.</h4>
+				  <% else %>
+				    <%= link_to "Sign up", sign_up_path %> or
+				    <%= link_to "log in", log_in_path %>
+				  <% end %>
+				</div>
+				
+				<h3><% flash.each do |name, msg| %>
+					<%= content_tag :div, msg, :id => "flash_#{name}" %>
+				<% end %></h3>
+				
+				<%= yield %>
+			</div>
+			<!-- End Left Column -->
+
+			<!-- Begin Right Column -->
+				<div id="rightcolumn">
+
+						<div class="add_boxes">
+							<h5>Info Posting #1</h5>
+							...dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam...
+						</div><br />
+
+						<div class="add_boxes">
+							<h5>Info Posting #2</h5>
+							"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo...
+						</div><br />
+						
+						<div class="add_boxes">
+							<h5>Info Posting #3</h5>
+							...dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam...
+						</div><br />
+						
+			</div>
+			<!-- End Right Column -->
+
+			<!-- Begin Footer -->
+			<div id="footer">
+				
+				<div class="footer_div_01">
+					<h5>HTML / CSS</h5>
+					<%= link_to 'Color Palettes', 'http://www.colourlovers.com/palettes', :target => '_blank' %><br />
+					<%= link_to 'Fixed Width CSS Layouts', 'http://www.code-sucks.com/css%20layouts/fixed-width-css-layouts/', :target => '_blank' %><br /><br />
+				</div><!-- End footer_div_01 -->
+				
+				<div class="footer_div_02">
+					<h5>Ruby on Rails</h5>
+					<%= link_to 'Ruby Gems', 'http://www.rubygems.org', :target => '_blank' %><br />
+					<%= link_to 'Ruby on Rails Guide', 'http://guides.rubyonrails.org/', :target => '_blank' %><br />
+					<%= link_to 'Code School', 'http://www.codeschool.com', :target => '_blank' %><br />
+					<%= link_to 'RailsCasts', 'http://www.railscasts.com', :target => '_blank' %><br />
+					<%= link_to 'Ruby on Rails Tutorial', 'http://ruby.railstutorial.org/', :target => '_blank' %>
+				</div><!-- End footer_div_02 -->
+
+				<div class="footer_div_03">
+					<h5>jQuery / JavaScript</h5>
+				</div><!-- End footer_div_03 -->
+
+				<div class="footer_div_04">
+					<h5>Development Tools</h5>
+				</div><!-- End footer_div_04 -->
+
+				<div class="footer_div_05">
+					<h5>Random Resources</h5>
+				</div><!-- End footer_div_05 -->
+				
+			</div>
+			<!-- End Footer -->
+
+		</div>
+	  <!-- End Wrapper -->
+
+	</body>
+		
+
+</html>

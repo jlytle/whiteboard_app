@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title><%= title %></title>
+			<%= csrf_meta_tag %><!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--><%= javascript_include_tag 'application' %><%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %><%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %><!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]--><%= stylesheet_link_tag 'custom', :media => 'screen' %>	
+	</head>
+	<body>
+	  <!-- Begin Wrapper -->
+	  <div id="wrapper">
+
+			
+			<%= yield %>
+				
+				<% flash.each do |name, msg| %>
+					<%= content_tag :div, msg, :id => "flash_#{name}" %>
+				<% end %>
+					
+		</div>
+	  <!-- End Wrapper -->
+	</body>
+</html>
